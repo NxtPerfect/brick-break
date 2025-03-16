@@ -1,4 +1,4 @@
-package src;
+package main;
 
 public class Player implements Object {
   int x = 0;
@@ -6,6 +6,7 @@ public class Player implements Object {
   int points = 0;
   final int width = 10;
   final int height = 5;
+
   // Listen to key pressed in cli input
   // then act upon it
   void move(int direction) {
@@ -31,7 +32,7 @@ public class Player implements Object {
 
   public boolean isColliding(Object other) {
     return (x + width) >= (other.x + other.width) &&
-    (y + height) >= (other.y + other.height);
+        (y + height) >= (other.y + other.height);
   }
 
   void draw() {

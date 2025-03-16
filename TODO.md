@@ -1,6 +1,10 @@
-- [ ] Game board
-    - how to draw it
+- [/] Game board
+    - [x] how to draw it
     - and draw the objects etc
+        - hold hashmap in game
+        with all the objects per line
+        if line has objects, add to heap or something
+        if it was drawn, remove from there until empty
 - [/] Player
     - [x] draw to screen
     - [/] move left/right

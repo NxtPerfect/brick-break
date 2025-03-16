@@ -1,3 +1,5 @@
+package main;
+
 public class Vector {
   int x = 0;
   int y = 0;
