@@ -1,15 +1,18 @@
 - [/] Game board
     - [x] how to draw it
-    - [ ] and draw the objects etc
-        - hold hashmap in game
-        with all the objects per line
-        if line has objects, add to heap or something
-        if it was drawn, remove from there until empty
+    - [x] and draw the objects etc
+    - [x] holds list of items
+    - [ ] if ball colides with border
+    reverse it's vector on that axis
+    - [ ] if player hits border
+    stop it's movement
 - [/] Player
     - [x] draw to screen
     - [/] move left/right
 - [ ] Bricks to break
 - [ ] Ball
+    - [ ] draw
+    - [ ] move according to vector
 - [ ] game loop
     - ball spawns at middle directed straight down
     if ball hits brick, player or wall, bounce

@@ -14,16 +14,16 @@ public class Board {
         continue;
       }
       for (int j = -1; j < size + 1; j++) {
-        if (isLeftBorder(j) || isRightBorder(j)) {
-          System.out.print(borders);
-          continue;
-        }
         for (int k = 0; k < objects.size(); k++) {
           Object curObject = objects.get(k);
-          if (curObject.y == j && curObject.x == i) {
+          if (curObject.y == i && curObject.x == j) {
             curObject.draw();
             j += curObject.width;
           }
+        }
+        if (isLeftBorder(j) || isRightBorder(j)) {
+          System.out.print(borders);
+          continue;
         }
         System.out.print(background);
       }
