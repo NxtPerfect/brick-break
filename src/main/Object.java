@@ -1,10 +1,12 @@
 package main;
 
-public interface Object {
+public abstract class Object {
   int x = 0;
   int y = 0;
   int width = 0;
-  int height = 0;
 
-  boolean isColliding(Object other);
+  boolean isColliding(Object other) {
+    return true;
+  };
+  void draw() {};
 }

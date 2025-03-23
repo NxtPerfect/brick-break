@@ -1,6 +1,6 @@
 - [/] Game board
     - [x] how to draw it
-    - and draw the objects etc
+    - [ ] and draw the objects etc
         - hold hashmap in game
         with all the objects per line
         if line has objects, add to heap or something
