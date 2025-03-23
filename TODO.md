@@ -16,7 +16,7 @@
     - [x] draw
     - [x] move according to vector
 - [ ] game loop
-    - ball spawns at middle directed straight down
-    if ball hits brick, player or wall, bounce
-    - each broke brick = 100 points
-    - each 10 bounces, ball accelerates further
+    - [x] ball spawns at middle
+    - [ ] if ball hits brick, player or wall, bounce
+    - [ ] each broke brick = 100 points
+    - [ ] each 10 bounces, ball accelerates further

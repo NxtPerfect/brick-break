@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Game {
-  int score = 0;
   public static final HashMap<String, String> ANSI_COLORS = new HashMap<>() {
     {
       put("reset", "\u001B[0m");
@@ -20,17 +19,14 @@ public class Game {
     }
   };
   List<Object> objects = new ArrayList<Object>();
+  Board board;
   Ball ball;
   Player player;
   List<Brick> bricks = new ArrayList<Brick>();
+  int score = 0;
 
   public Game() {
-    // TODO: game setup
-    return;
-  }
-
-  void main() {
-    Board board = new Board("test");
+    board = new Board("test");
 
     int yBottomPointBoard = board.size - 1;
     int xMiddlePointBoard = board.size / 2;
@@ -39,7 +35,6 @@ public class Game {
 
     int yMiddlePointBoard = board.size / 2;
     ball = new Ball(xMiddlePointBoard, yMiddlePointBoard);
-    ball.move();
     objects.add(ball);
 
     int xRightPointBoard = board.size;
@@ -48,7 +43,19 @@ public class Game {
     Brick blueBrick = new Brick(0 + 1, 1, 5, "blue");
     bricks.add(blueBrick);
     objects.addAll(bricks);
+  }
 
-    board.draw(objects, score);
+  void main() {
+    while (true) {
+      ball.move();
+      board.draw(objects, score);
+      try {
+        Thread.sleep(1000);
+      } catch (Exception e) {
+        System.out.println("Failed to sleep.");
+        return;
+      }
+      board.clearBoard();
+    }
   }
 }
