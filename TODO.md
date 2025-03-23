@@ -9,10 +9,12 @@
 - [/] Player
     - [x] draw to screen
     - [/] move left/right
-- [ ] Bricks to break
-- [ ] Ball
-    - [ ] draw
-    - [ ] move according to vector
+- [/] Bricks to break
+    - [x] draw
+    - [ ] if hit by ball, remove segment
+- [x] Ball
+    - [x] draw
+    - [x] move according to vector
 - [ ] game loop
     - ball spawns at middle directed straight down
     if ball hits brick, player or wall, bounce
